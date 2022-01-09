@@ -1,0 +1,70 @@
+package labTest1;
+
+import java.util.Scanner;
+
+public class Question2 {
+	
+	private static Scanner scan;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int hourlyWage = 5;
+		double dailyWage;
+		double wage;
+		int hour;
+		double sales;
+		double com=0;
+		
+		scan = new Scanner(System.in);
+		
+		System.out.print("Enter sales	  : RM");
+		sales = scan.nextDouble();
+		System.out.print("Enter hours worked: ");
+		hour = scan.nextInt();
+		System.out.println("");
+		
+		if (sales >= 150 && sales <= 300)
+		{
+			com = sales * 0.05;
+			System.out.printf("Commission	  : RM%.2f\n", com);
+			wage = hour * hourlyWage;
+			dailyWage = wage + com;
+			System.out.printf("Daily wages	  : RM%.2f\n", dailyWage);
+			
+		}
+		
+		else if (sales >= 301 && sales <= 500)
+		{
+			com = sales * 0.1;
+			System.out.printf("Commission	  : RM%.2f\n", com);
+			wage = hour * hourlyWage;
+			dailyWage = wage + com;
+			System.out.printf("Daily wages	  : RM%.2f\n", dailyWage);
+			
+		}
+		
+		else if (sales > 500)
+		{
+			com = sales * 0.15;
+			System.out.printf("Commission	  : RM%.2f\n", com);
+			wage = hour * hourlyWage;
+			dailyWage = wage + com;
+			System.out.printf("Daily wages	  : RM%.2f\n", dailyWage);
+			
+		}
+		
+		else 
+		{
+			com = sales;
+			System.out.printf("Commission	  : RM%.2f\n", com);
+			wage = hour * hourlyWage;
+			dailyWage = wage + com;
+			System.out.printf("Daily wages	  : RM%.2f\n", dailyWage);
+			
+		}
+		
+
+	}
+
+}
